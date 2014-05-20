@@ -40,8 +40,8 @@ namespace HREngine.Bots
           retval += p.ownMaxMana;
           retval -= p.enemyMaxMana;
 
-          retval += p.ownMinions.Count * 10;
-          retval -= p.enemyMinions.Count * 10;
+          retval += p.ownMinions.Count * 10 / (p.mana + 1);
+          retval -= p.enemyMinions.Count * 10 / (p.mana + 1);
 
 
 
